@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HENRY MOVIE WEB</title>
+    <link rel="icon" href="../img/logo_herny.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href=" ../css/reset.css"/>
+>>>>>>> 29bbdfb78a10a288e4969b8b111346e87d594f1f
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.min.css" />
+  </head>
+  <body>
+    <div class="banner-container">
+      <video autoplay muted loop playsinline>
+          <source src="../media/banner_2.webm" type="video/webm">
+          Tu navegador no soporta la etiqueta de video.
+      </video>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img
+          src="../img/logo_herny.avif"
+          alt="Icono"
+          style="width: 24px; height: 24px; margin-right: 8px"
+        />
+        <a class="navbar-brand" href="../index.html">HENRY MOVIE WEB</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proyecto.html">SOBRE EL PROYECTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historia.html">HISTORIA DEL CINE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="webfriendly.html">WEBS AMIGAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">SOBRE MI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inputDB.html">CARGA DE DATOS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <style>
+      .modal-content.custom-modal {
+        background-color: black; /* Fondo negro */
+        color: white; /* Texto blanco */
+      }
+    </style>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+          <!-- Aplicar clase personalizada -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">¡Éxito!</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <!-- Botón de cierre blanco -->
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <h2>
+              ENHORABUENA, ACABAS DE INGRESAR UNA NUEVA PELICULA. TE FELICITO
+            </h2>
+            <img src="../media/alien_dancing_1.gif" alt="¡Felicidades!" />
+          </div>
+          <div class="modal-footer">
+            <button
+              id="acceptButton"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <form
+              class="needs-validation bg-light border rounded shadow p-4 text-center"
+              novalidate
+            >
+              <h1 class="text-center mb-4 text-dark font-weight-bold">
+                INFORMACIÓN DE LA PELÍCULA
+              </h1>
+              <div class="mb-3 text-center">
+                <label
+                  for="movieTitle"
+                  class="form-label text-dark font-weight-bold font-italic needs-validation"
+                  >Título</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="movieTitle"
+                  placeholder="Ingrese título de la película"
+                  required
+                />
+                <div class="invalid-feedback" id="titleFeedback">
+                  Por favor, ingrese el título de la película.
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label
+                  for="year"
+                  class="form-label text-dark font-weight-bold font-italic"
+                  >Año</label
+                >
+                <select class="form-select" id="year" required></select>
+
+<<<<<<< HEAD
+                <div class="invalid-feedback">
+=======
+                <div class="invalid-feedback" id="yearFeedback">
+>>>>>>> 29bbdfb78a10a288e4969b8b111346e87d594f1f
+                  Por favor, seleccione el año de estreno.
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label
+                  for="director"
+                  class="form-label text-dark font-weight-bold font-italic"
+                  >Director</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="director"
+                  placeholder="Ingrese el director de la película"
+                  required
+                />
+                <div class="invalid-feedback" id="directorFeedback">
+                  Por favor, ingrese el nombre del director.
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label
+                  for="movieDuration"
+                  class="form-label text-dark font-weight-bold font-italic"
+                  >Duración</label
+                >
+                <input
+                  type="time"
+                  class="form-control"
+                  id="movieDuration"
+                  step="60"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingrese la duración de la película.
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label class="form-label text-dark font-weight-bold font-italic"
+                  >Género</label
+                >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="checkbox" id="action" value="Action" />
+                      <label for="action" class="text-dark font-weight-bold"
+                        >Action</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="adventure" value="Adventure" />
+                      <label for="adventure" class="text-dark font-weight-bold"
+                        >Adventure</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="comedy" value="Comedy" />
+                      <label for="comedy" class="text-dark font-weight-bold"
+                        >Comedy</label
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="checkbox" id="drama" value="Drama" />
+                      <label for="drama" class="text-dark font-weight-bold"
+                        >Drama</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="fantasy" value="Fantasy" />
+                      <label for="fantasy" class="text-dark font-weight-bold"
+                        >Fantasy</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="horror" value="Horror" />
+                      <label for="horror" class="text-dark font-weight-bold"
+                        >Horror</label
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="checkbox" id="mystery" value="Mystery" />
+                      <label for="mystery" class="text-dark font-weight-bold"
+                        >Mystery</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="thriller" value="Thriller" />
+                      <label for="thriller" class="text-dark font-weight-bold"
+                        >Thriller</label
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <input type="checkbox" id="sci-fi" value="Sci-Fi" />
+                      <label for="sci-fi" class="text-dark font-weight-bold"
+                        >Sci-Fi</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="invalid-feedback" id="genreFeedback">
+                  Por favor, seleccione al menos un género.
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label
+                  for="rating"
+                  class="form-label text-dark font-weight-bold font-italic"
+                  >Rating</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rating"
+                  placeholder="Ingrese la puntuación"
+                  required
+                  pattern="^(10|[0-9](\.[0-9]+)?)$"
+                />
+                <div class="invalid-feedback" id="rateFeedback">
+                  Por favor, ingrese un rating válido (ej: 8.5 - de 0 a 10).
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <label
+                  for="poster"
+                  class="form-label text-dark font-weight-bold font-italic"
+                  >Poster</label
+                >
+                <input
+                  type="url"
+                  class="form-control"
+                  id="poster"
+                  placeholder="Ingrese la URL del poster"
+                  required
+                />
+                <div class="invalid-feedback" id="posterFeedback">
+                  Por favor, ingrese una URL válida para el poster. Asegúrese de
+                  que tenga extensiones como jpg, png, gif, svg o bmp.
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">
+                  CARGAR PELICULA
+                </button>
+                <button type="button" class="btn btn-warning" id="clearForm">
+                  BORRAR CAMPOS
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text-muted mb-0">
+              &copy; <span id="current-year"></span> - Gustavo Galdeano - Curso
+              Full Stack Developer - HENRY
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              const checkboxes = document.querySelectorAll(
+                'input[type="checkbox"]'
+              );
+              const atLeastOneChecked = Array.from(checkboxes).some(
+                (checkbox) => checkbox.checked
+              );
+
+              if (!atLeastOneChecked) {
+                document.getElementById("genreFeedback").style.display =
+                  "block";
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                document.getElementById("genreFeedback").style.display = "none";
+              }
+
+              const posterUrl = document.getElementById("poster").value;
+              const validImageExtensions = /\.(jpg|jpeg|png|gif|svg|bmp)$/i;
+              if (!validImageExtensions.test(posterUrl)) {
+                document.getElementById("posterFeedback").style.display =
+                  "block";
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                document.getElementById("posterFeedback").style.display =
+                  "none";
+              }
+
+              //Mostrar el modal de éxito
+              // const modal = new bootstrap.Modal(
+              //   document.getElementById("successModal")
+              // );
+              // modal.show();
+              Swal.fire({
+                title: "EXITO!",
+                text: " ENHORABUENA, ACABAS DE INGRESAR UNA NUEVA PELICULA. TE FELICITO",
+                color: "#13e84f",
+                imageUrl: "../media/alien_dancing_1.gif",
+                imageWidth: 400,
+                imageHeight: 307,
+                imageAlt: "Custom image",
+                background: "#000",
+                confirmButtonColor: "#13e84f",
+
+              });
+
+              form.classList.add("was-validated");
+              
+            },
+            false
+          );
+        });
+      })();
+
+      document
+        .getElementById("clearForm")
+        .addEventListener("click", function () {
+          const form = document.querySelector(".needs-validation");
+          form.reset();
+          form.classList.remove("was-validated");
+          document.getElementById("genreFeedback").style.display = "none";
+          document.getElementById("posterFeedback").style.display = "none";
+        });
+    </script>
+    <script>
+      const selectElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      const defaultOption = document.createElement("option");
+      defaultOption.value = "";
+      defaultOption.textContent = "Seleccione año estreno";
+      defaultOption.selected = true;
+      defaultOption.disabled = true;
+      selectElement.appendChild(defaultOption);
+
+      for (let year = currentYear; year >= 1920; year--) {
+        const option = document.createElement("option");
+        option.value = year;
+        option.textContent = year;
+        selectElement.appendChild(option);
+      }
+
+      selectElement.selectedIndex = 0;
+    </script>
+
+<<<<<<< HEAD
+=======
+    <script>
+      const selectElement = document.getElementById("year");
+      const currentYear = new Date().getFullYear();
+      const defaultOption = document.createElement("option");
+      defaultOption.value = "";
+      defaultOption.textContent = "Seleccione año estreno";
+      defaultOption.selected = true;
+      defaultOption.disabled = true;
+      selectElement.appendChild(defaultOption);
+
+      for (let year = currentYear; year >= 1920; year--) {
+        const option = document.createElement("option");
+        option.value = year;
+        option.textContent = year;
+        selectElement.appendChild(option);
+      }
+
+      selectElement.selectedIndex = 0;
+    </script>
+    <script>
+      document
+        .getElementById("rating")
+        .addEventListener("input", function (event) {
+          
+          const regex = /^(10|[0-9](\.[0-9]*)?)$/;
+
+          
+          const value = event.target.value;
+
+          
+          if (!regex.test(value) && value !== "") {
+            
+            event.target.value = value.slice(0, -1);
+          }
+        });
+    </script>
+
+>>>>>>> 29bbdfb78a10a288e4969b8b111346e87d594f1f
+    <script src="../public/bundle.js"></script>
+  </body>
+</html>

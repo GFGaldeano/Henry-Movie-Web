@@ -1,0 +1,289 @@
+body {
+  background-color: #424f5d;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; 
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}.card-custom {
+  position: relative; 
+  overflow: hidden; 
+  background-color: transparent; 
+}
+.cardsmovie{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-bottom:  1em;
+  background-color: transparent;
+}
+
+.video-background {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; 
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.5; 
+}
+
+.card-body {
+  position: relative;
+  z-index: 1; 
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column; 
+  transition: transform 0.3s;
+  border-radius: 5px;
+  background-color: #798fa5;
+  margin: 1em; 
+  width: 300px; 
+  height: 450px;
+  overflow: hidden; 
+}
+
+.movie-card img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+.card-text {
+  transition: color 0.3s;
+}
+
+#cards-container {
+    display: flex;               
+    flex-wrap: wrap;           
+    justify-content: space-between; 
+    gap: 1em;                   
+}
+
+#cards-container-wa {
+  display: flex;               
+  flex-wrap: wrap;            
+  justify-content: space-evenly; 
+  gap: 1em;                   
+  margin-top: 2em;
+}
+
+.my-div {
+  color: white;
+  font-size: 1.5em;
+  text-align: start;
+  text-align: end;
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+}
+
+.menu-item {
+  transition: color 0.3s, transform 0.3s;
+  font-size: 1.1rem;
+}
+
+.menu-item:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+
+.movie-card:hover .card-title {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.movie-card:hover .card-text {
+  color: #32cd32;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #007bff;
+}
+.navbar-nav .nav-link:hover {
+  color: #0056b3;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+.description-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 250px;
+  height: 250px;
+}
+
+.cards {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 1em 1em 2em 1em;
+  border-radius: 10%;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.cards:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  background-color: rgb(249, 252, 253);
+}
+
+.banner-container {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.banner-container video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.collaspe-div {
+  border: 2px solid rgb(248, 247, 247);
+  width: fit-content;
+  padding: 1em 1em 2em 1em;
+  border-radius: 10%;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-container {
+  width: 50%;
+}
+
+.video-container {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+#intro-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#ajax-content {
+  display: none;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+}
+
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+#carouselExampleIndicators {
+  width: 50%; 
+  margin: 0; 
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: auto; 
+}
+
+
+.bg-dark {
+  background-color: transparent !important; 
+}
+
+#carouselExampleIndicators {
+  margin-top: 130px; 
+}
+
+#movie-container {
+  display: flex;               
+  flex-wrap: wrap;            
+  justify-content: space-between; 
+  margin: 2em;      
+  gap: 2em;          
+}
+
+.text-container {
+  width: 300px;               
+  height: 150px;              
+  border: 1px solid #ccc;      
+  padding: 10px;              
+  overflow: hidden;           
+  display: flex;               
+  align-items: center;         
+  justify-content: center;     
+  text-align: justify;         
+  text-justify: inter-word;    
+  white-space: normal;        
+  line-height: 1.5;            
+}
+
+.container-history {
+  display: flex;
+}
+
+.flex-fill {
+  flex: 1;
+  min-height: 400px; 
+}
