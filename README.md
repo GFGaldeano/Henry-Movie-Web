@@ -1,7 +1,4 @@
 
-![alt text][logo]
-
-[logo]: https://res.cloudinary.com/dfoxsvhei/image/upload/v1730915804/logo_herny_e2t0mh.ico "Logo Title Text 2"
 
 # **HENRY MOVIE WEB APP**
 
