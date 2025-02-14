@@ -10,14 +10,6 @@ No te pierdas está fantástica aventura! Ingresa al maravilloso mundo del sépt
 
 
 
-
-
-## **_PROYECTO MÓDULO 2 – FULL STACK DEVELOPER_**
-
-### **Autor**: GUSTAVO FEDERICO GALDEANO
-
-### **Cohorte**: WEBFT56
-
 ### **Descripción**:
 Este proyecto tiene como fin catalogar películas mostrando toda la información correspondiente a su nombre, año, director, género, imagen de la película, etc. También se cuenta con un sistema de carga de información, el cual  guarda la misma en una base de datos. Además cuenta con una interfaz intuitiva ya al a ves divertida para dar una buena experiencia al usuario.
 
